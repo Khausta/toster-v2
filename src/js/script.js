@@ -99,6 +99,53 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//drop down
+document.querySelectorAll('.accordeon-item-js__trigger').forEach((item) => {
+  item.addEventListener('click', () => {
+      let content = item.nextElementSibling;
+      let arrow = item.querySelector('.accordeon-item-js__arrow');
+
+
+
+      if(content.style.maxHeight) {
+          document.querySelectorAll('.accordeon-item-js__content').forEach ( el => el.style.maxHeight = null);
+          arrow.classList.remove('__active');
+          
+      } else {
+          document.querySelectorAll('.accordeon-item-js__content').forEach ( el => el.style.maxHeight = null);    
+          content.style.maxHeight = content.scrollHeight + 'px';  
+          content.style.visibility = 'visible';
+          content.style.opacity = '1';
+          arrow.classList.add('__active');
+      }
+
+  })
+})
+
+
+const hiddenText = document.querySelector('.footer__text_hidden');
+const buttonReadMore = document.querySelector('.button-read-more');
+
+buttonReadMore.addEventListener('click', () => {
+  console.log(hiddenText.style.maxHeight);
+  if (hiddenText.style.maxHeight) {
+    hiddenText.style.maxHeight = null;
+    hiddenText.classList.remove('visible');
+    buttonReadMore.classList.add('button__accent');
+    buttonReadMore.textContent = 'Read more';
+
+  } else {
+    hiddenText.style.maxHeight = null;
+    hiddenText.style.maxHeight = hiddenText.scrollHeight + 'px'; 
+    hiddenText.classList.add('visible');
+    buttonReadMore.textContent = 'Read less';
+    buttonReadMore.classList.remove('button__accent');
+  }
+})
+
+
+
+
 
 
 class Menu {
