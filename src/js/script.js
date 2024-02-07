@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-  const deadline = new Date('02-09-2024');
+  const deadline = new Date('02-08-2024');
   let timerId = null;
   function countdownTimer() {
     const diff = deadline - new Date();
@@ -45,7 +45,7 @@ const stockIndicator = document.querySelector('.good__stock-left');
 
 stockCounter.addEventListener('change', () => {
   console.log(stockCounter.value);
-  stockIndicator.style.width = stockCounter.value + '%';
+  stockIndicator.style.width = stockCounter.textContent + '%';
 })
 
 document.querySelectorAll('.accordeon-item-js__trigger').forEach((item) => {
