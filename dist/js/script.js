@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-  const deadline = new Date('02-08-2024');
+  const deadline = new Date('02-09-2024');
   let timerId = null;
   function countdownTimer() {
     const diff = deadline - new Date();
