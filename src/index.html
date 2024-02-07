@@ -24,7 +24,9 @@
             </div>
             <div class="header-block__subheader container">
                 <img class="header-block__logo" src="img/header.svg" alt="technopark logotype">
-                <img src="img/menu.svg" alt="menu icon">
+                <button class="header-block__menu-btn">
+                    <img  src="img/menu.svg" alt="menu icon">
+                </button>
             </div>
         </section>
         <section class="promo container">
@@ -85,16 +87,16 @@
                 <div class="good__photos swiper">
                     <div class="good__swiper swiper-wrapper">
                         <div class="good__photo swiper-slide">
-                            <img src="img/black.png" alt="">
+                            <img src="img/slider-1.jpg" alt="">
                         </div>
                         <div class="good__photo swiper-slide">
-                            <img src="img/orange.png" alt="">
+                            <img src="img/slider-2.jpg" alt="">
                         </div>
                         <div class="good__photo swiper-slide">
-                            <img src="img/pink.png" alt="">
+                            <img src="img/slider-3.jpg" alt="">
                         </div>
                         <div class="good__photo swiper-slide">    
-                            <img src="img/yellow.png" alt="">
+                            <img src="img/slider-4.jpg" alt="">
                         </div>
                     </div> 
                     <div class="swiper-pagination good__pagination">
@@ -110,7 +112,7 @@
                 </div>
                 <h2 class="good__name">Apple MacBook Air (M1, 2020) 16 ГБ, 1 ТБ SSD “Space Gray”</h2>
                 <div class="good__stock">
-                    <input type="text" class="good__number" value="35"  onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';" disabled>
+                    <input type="text" class="good__number" value="35" disabled>
                     <span>
                         items left
                     </span>
@@ -122,10 +124,6 @@
                     The Handheld Gateway to Your PS5® Games Play Your Game Collection Experience Breathtaking Immersion with DualSense® Wireless Controller Features
 Feel the incredible immersion of haptic feedback and adaptive triggers in supported games
                 </p>
-                
-                
-                
-               
             </div>
         </section>
         <section class="timer container">
@@ -159,7 +157,7 @@ Feel the incredible immersion of haptic feedback and adaptive triggers in suppor
                 <img src="img/afterpay-logo.svg" alt="afterplay logo">
                 <span>with 10 interest-free installments</span>
             </div>
-            <button class="buy__button">Buy now pay later</button>
+            <button class="buy__button buy__button-click">Buy now pay later</button>
             <div class="buy__text">
                 <p>In stock, ready for ship</p>
                 <p>Delivery in 2-4 days in UK</p>
@@ -214,11 +212,58 @@ Feel the incredible immersion of haptic feedback and adaptive triggers in suppor
         </footer>
     </main>
 
-    <div class="overlay _active">
+    <div class="menu container ">
+        <div class="menu__header">
+            <img class="menu__logo" src="img/mneu-logo.svg" alt="technopark logotype">
+            <button class="menu__close">
+                <img src="img/close-popup.svg" alt="menu icon">
+            </button>
+        </div>
+        <nav class="menu__items">
+            <ul>
+                <li class="menu__item _active">
+                    <a href="#">
+                        <p>
+                            Go to product page
+                        </p>
+                        <img class="menu__arrow" src="img/dropdown-arrow.svg" alt="arrow icon">
+                    </a>
+                 </li>
+                <li class="menu__item">
+                    <a href="#">
+                        <p>
+                            Track your order
+                        </p>
+                        <img class="menu__arrow" src="img/dropdown-arrow.svg" alt="arrow icon">
+                    </a>
+                 </li>
+                <li class="menu__item">
+                    <a href="#">
+                        <p>
+                            Contact us
+                        </p>
+                        <img class="menu__arrow" src="img/dropdown-arrow.svg" alt="arrow icon">
+                    </a>
+                 </li>
+                <li class="menu__item">
+                    <a href="#">
+                        <p>
+                            FAQ
+                        </p>
+                        <img class="menu__arrow" src="img/dropdown-arrow.svg" alt="arrow icon">
+                    </a>
+                 </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="overlay">
         <div class="popup">
             <div class="popup__row popup__header">
                 <img src="img/afterpay-logo.svg" alt="afterplay logo">
-                <img class="popup__close" src="img/close-popup.svg" alt="close icon">
+                <button class="popup__close"> 
+                    <img  src="img/close-popup.svg" alt="close icon">
+                </button>
             </div>
             <div class="popup__row popup__title">
                 Make easy monthly payments
@@ -250,7 +295,7 @@ Feel the incredible immersion of haptic feedback and adaptive triggers in suppor
                 </div>
             </div>
             <hr>
-            <button class="buy__button">Confirm to checkout</button>
+            <button class="buy__button popup__button-click">Confirm to checkout</button>
            
         </div>
     </div>
